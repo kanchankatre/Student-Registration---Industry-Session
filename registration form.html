@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration - Industry Session</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d3d3d3; /* Grey background */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 450px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        form label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #34495e;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form input[type="tel"],
+        form select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        form input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #2980b9;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #1c5980;
+        }
+
+        .note {
+            font-size: 12px;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Registration - Industry Session</h2>
+    <form>
+        <!-- Personal Information -->
+        <label for="name">Full Name <span style="color:red;">*</span></label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+        <label for="email">Email ID <span style="color:red;">*</span></label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="contact">Contact Number <span style="color:red;">*</span></label>
+        <input type="tel" id="contact" name="contact" placeholder="Enter your contact number" required>
+        <span class="note">Format: +91-XXXXXXXXXX</span>
+
+        <!-- Academic Information -->
+        <label for="college">College / School Name <span style="color:red;">*</span></label>
+        <input type="text" id="college" name="college" placeholder="Enter your college or school name" required>
+
+        <label for="course">Course / Stream <span style="color:red;">*</span></label>
+        <input type="text" id="course" name="course" placeholder="Enter your course or stream" required>
+
+        <label for="year">Year of Study <span style="color:red;">*</span></label>
+        <select id="year" name="year" required>
+            <option value="" disabled selected>Select your year</option>
+            <option value="1st">1st Year</option>
+            <option value="2nd">2nd Year</option>
+            <option value="3rd">3rd Year</option>
+            <option value="4th">4th Year</option>
+        </select>
+
+        <!-- Session Preferences -->
+        <label for="session">Preferred Session <span style="color:red;">*</span></label>
+        <select id="session" name="session" required>
+            <option value="" disabled selected>Select a session</option>
+            <option value="morning">Morning Session (9 AM - 12 PM)</option>
+            <option value="afternoon">Afternoon Session (1 PM - 4 PM)</option>
+            <option value="evening">Evening Session (5 PM - 8 PM)</option>
+        </select>
+
+        <input type="submit" value="Register">
+    </form>
+</div>
+
+</body>
+</html>
